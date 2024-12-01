@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+/* General styles for hotspots */
+.hotspot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.8); /* Blue circular marker */
+  border: none;
+  pointer-events: auto;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Annotation style */
+.annotation {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark translucent background */
   color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  position: absolute;
+  top: -40px; /* Adjust to position above the hotspot */
+  left: -20px;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translateX(-50%);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Keeps the hotspots hidden during model loading */
+model-viewer:not(:defined) .hotspot {
+  display: none;
 }
