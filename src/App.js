@@ -13,6 +13,15 @@ function App() {
             poster="poster.png"
             shadow-intensity="1">
           </model-viewer>
+          <model-viewer
+            src="Eye.glb"
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.png"
+            shadow-intensity="1">
+          </model-viewer>
     </div>
   );
 }
