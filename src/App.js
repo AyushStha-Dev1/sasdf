@@ -8,7 +8,7 @@ function App() {
         <h1>Imperial World School</h1>
         <p>Ar/VrPrototype</p>
       </nav>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div style={{ display: "flex", justifyContent: "space-around",flexDirection:'column'}}>
         <div>
           <model-viewer
             style={{ width: "400px", height: "400px" }}
