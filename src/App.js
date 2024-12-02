@@ -4,33 +4,55 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Welcome</h1>
-      <model-viewer
-        style={{ width: "400px", height: "400px" }}
-        src="skele.glb"
-        ar
-        ar-modes="scene-viewer webxr quick-look"
-        camera-controls
-        tone-mapping="neutral"
-        poster="poster.png"
-        shadow-intensity="1"
-      >
-    
-      </model-viewer>
-      <model-viewer
-        src="Eye.glb"
-        ar
-        ar-modes="scene-viewer webxr quick-look"
-        camera-controls
-        tone-mapping="neutral"
-        poster="poster.png"
-        width="400"
-        shadow-intensity="1"
-      >
-        <button className="hotspot" slot="hotspot-eye" data-position="0 0.5 0.3" data-normal="0 0 1">
-          <div className="annotation">Eye Model</div>
-        </button>
-      </model-viewer>
+      <nav style={{ background: "#38B2AC", textAlign: 'center', padding: '1rem' }}>
+        <h1>Imperial World School</h1>
+        <p>Ar/VrPrototype</p>
+      </nav>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div>
+          <model-viewer
+            style={{ width: "400px", height: "400px" }}
+            src="skele.glb"
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.png"
+            shadow-intensity="1"
+          >
+          </model-viewer>
+          <h1>Skeleton</h1>
+        </div >
+        <div>
+          <model-viewer
+            style={{ width: "400px", height: "400px" }}
+            src="BeatingHeart.glb"
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.png"
+            shadow-intensity="1"
+          >
+          </model-viewer>
+          <h1>Heart</h1>
+        </div >
+
+        <div>
+          <model-viewer
+            style={{ width: "400px", height: "400px" }}
+            src="kidney.glb"
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.png"
+            shadow-intensity="1"
+          >
+          </model-viewer>
+          <h1>Kidney </h1>
+        </div >
+      </div>
     </div>
   );
 }
