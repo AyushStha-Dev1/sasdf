@@ -26,7 +26,7 @@ function App() {
         <div>
           <model-viewer
             style={{ width: "400px", height: "400px" }}
-            src="BeatingHeart.glb"
+            src="Beatingheart.glb"
             ar
             ar-modes="scene-viewer webxr quick-look"
             camera-controls
@@ -37,8 +37,7 @@ function App() {
           </model-viewer>
           <h1>Heart</h1>
         </div >
-
-        <div>
+                <div>
           <model-viewer
             style={{ width: "400px", height: "400px" }}
             src="kidney.glb"
